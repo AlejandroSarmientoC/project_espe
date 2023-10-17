@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Im-Rises/Im-Rises.github.io/main/images/emotion-recognition-cnn-clear.png">
+    <title>Emotion Recognition</title>
+</head>
+<body>
+<h1>Emotion Recognition</h1>
+<video id="video" autoplay playsinline style="display: none;"></video>
+choose your camera : <select size="1" id="select" width="220px"></select>
+<input type="button" id="change_camera" value="Switch Camera">
+<div id="inline">
+    <div id="result">
+        <div id="showEmotion"></div>
+    </div>
+    <canvas id="canvas" width="640px" height="480px"></canvas>
+    <canvas id="canvasBuffer" width="640px" height="480px" style="display: none"></canvas>
+    <canvas id="canvasFace" width="80px" height="80px" style="display: none"></canvas>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+<script src="index.js"></script>
+</html>
